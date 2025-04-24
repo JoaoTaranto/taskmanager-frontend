@@ -1,3 +1,5 @@
+import { AiFillDelete } from "react-icons/ai";
+
 import "./TaskItem.scss";
 
 const TaskItem = ({ task }) => {
@@ -18,6 +20,10 @@ const TaskItem = ({ task }) => {
                     }
                 ></span>
             </label>
+
+            <div className="delete">
+                <AiFillDelete size={18} color="F97474" />
+            </div>
         </div>
     );
 };
