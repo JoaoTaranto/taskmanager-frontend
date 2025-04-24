@@ -1,9 +1,24 @@
+import "./TaskItem.scss";
+
 const TaskItem = ({ task }) => {
     return (
-        <>
-            <h1>{task.description}</h1>
-            <p>{task.isCompleted ? "Completa" : "Não Completa"}</p>
-        </>
+        <div className="task-item-container">
+            <label
+                className={
+                    task.isCompleted
+                        ? "checkbox-container-completed"
+                        : "checkbox-container"
+                }
+            >
+                {task.description}
+                <input type="checkbox" defaultChecked={task.isCompleted} />
+                <span
+                    className={
+                        task.isCompleted ? "checkmark completed" : "checkmark"
+                    }
+                ></span>
+            </label>
+        </div>
     );
 };
 

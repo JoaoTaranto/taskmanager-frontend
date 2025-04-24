@@ -3,7 +3,7 @@ import axios from "axios";
 
 import "./Tasks.scss";
 
-import { TaskItem } from "./TaskItem";
+import TaskItem from "./TaskItem";
 
 const Tasks = () => {
     const [tasks, setTasks] = useState([]);
